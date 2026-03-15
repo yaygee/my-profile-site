@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="예지안(Yejian) - 뭘 하는지 잘 모르겠는 사람의 프로필 웹사이트">
+    <title>예지안 | Yejian</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-sky-600 text-white px-4">
+        <div class="text-center max-w-4xl fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">예지안</h1>
+            <p class="text-2xl md:text-4xl mb-6 text-sky-200">Yejian</p>
+            <p class="text-xl md:text-2xl text-sky-100 font-light mb-8">뭘 하는지 잘 모르겠는 사람</p>
+            <div class="flex justify-center gap-4">
+                <a href="#about" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    더 알아보기
+                </a>
+                <a href="#contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 border border-white/30">
+                    연락하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white section-hidden">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-blue-900">자기소개</h2>
+            <div class="space-y-6 text-lg md:text-xl text-gray-700">
+                <p class="leading-relaxed">
+                    정확히 뭘 하는지는 잘 모르겠지만, <span class="font-semibold text-blue-900">시키면 일단 다 해봅니다.</span>
+                </p>
+                <p class="leading-relaxed">
+                    문제가 생기면? <span class="font-semibold text-sky-600">구글링부터 하고 봅니다.</span>
+                </p>
+                <p class="leading-relaxed">
+                    <span class="font-semibold text-amber-600">☕ 커피</span>와 <span class="font-semibold text-blue-900">💻 코드</span>로 살아가는 정체불명의 인간.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gray-50 section-hidden">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-blue-900">기술 스택</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Primary Skill -->
+                <div class="col-span-2 md:col-span-3 lg:col-span-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-all cursor-pointer">
+                    <div class="text-center">
+                        <i class="fas fa-star text-4xl mb-4"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold">시키면 다 함</h3>
+                        <p class="mt-2 text-amber-100">일단 해보는 정신</p>
+                    </div>
+                </div>
+
+                <!-- Regular Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all cursor-pointer border-2 border-blue-100">
+                    <div class="text-center">
+                        <i class="fab fa-html5 text-4xl text-orange-600 mb-3"></i>
+                        <h3 class="font-semibold text-lg">HTML/CSS</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all cursor-pointer border-2 border-blue-100">
+                    <div class="text-center">
+                        <i class="fab fa-js text-4xl text-yellow-500 mb-3"></i>
+                        <h3 class="font-semibold text-lg">JavaScript</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all cursor-pointer border-2 border-blue-100">
+                    <div class="text-center">
+                        <i class="fas fa-lightbulb text-4xl text-amber-500 mb-3"></i>
+                        <h3 class="font-semibold text-lg">문제 해결</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all cursor-pointer border-2 border-blue-100">
+                    <div class="text-center">
+                        <i class="fas fa-bolt text-4xl text-sky-500 mb-3"></i>
+                        <h3 class="font-semibold text-lg">빠른 학습</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all cursor-pointer border-2 border-blue-100">
+                    <div class="text-center">
+                        <i class="fab fa-google text-4xl text-blue-600 mb-3"></i>
+                        <h3 class="font-semibold text-lg">구글링 마스터</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white section-hidden">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-blue-900">프로젝트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                        <i class="fas fa-tasks text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-900">할 일 관리 앱</h3>
+                        <p class="text-gray-600 mb-4">해야 할 일을 기록했다가 까먹는 앱</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">HTML</span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-blue-900 hover:bg-blue-800 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-sky-400 to-blue-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-cloud-sun text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-900">날씨 대시보드</h3>
+                        <p class="text-gray-600 mb-4">창문 밖을 보면 되지만 만들어본 날씨 앱</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">API</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">JavaScript</span>
+                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">Tailwind</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-blue-900 hover:bg-blue-800 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-amber-500 to-orange-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-900">포트폴리오 웹사이트</h3>
+                        <p class="text-gray-600 mb-4">지금 보고 계신 이 웹사이트</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">HTML</span>
+                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold">Tailwind</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-blue-900 hover:bg-blue-800 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white text-center py-2 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-sky-600 text-white section-hidden">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Let's Connect</h2>
+            <p class="text-xl md:text-2xl mb-12 text-sky-100">프로젝트 문의나 협업 제안이 있으시다면 연락주세요!</p>
+            <div class="flex justify-center">
+                <a href="https://github.com/yejian" target="_blank" rel="noopener noreferrer"
+                   class="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-110 shadow-2xl inline-flex items-center gap-3">
+                    <i class="fab fa-github text-3xl"></i>
+                    <span>GitHub 방문하기</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-lg">© 2026 Yejian. Made with ☕ and 💻</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
